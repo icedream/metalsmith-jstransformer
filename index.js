@@ -6,7 +6,7 @@ const toTransformer = require('inputformat-to-jstransformer')
 const extend = require('extend')
 const async = require('async')
 const clone = require('clone')
-const minimatch = require('minimatch')
+const multimatch = require('multimatch')
 
 const transformers = {}
 
@@ -38,7 +38,7 @@ module.exports = function (opts) {
     // Retrieve all layouts.
     const templates = {}
     const filesKeys = Object.keys(files)
-    const layouts = minimatch.match(filesKeys, opts.layoutPattern, {matchBase: true})
+    const layouts = multimatch(filesKeys, opts.layoutPattern, {matchBase: true})
 
     /**
      * Compile the given layout and store it in templates.
@@ -212,7 +212,7 @@ module.exports = function (opts) {
         let contentFiles = []
 
         try {
-          contentFiles = minimatch.match(filesKeys, opts.pattern, {matchBase: true})
+          contentFiles = multimatch(filesKeys, opts.pattern, {matchBase: true})
         } catch (err) {
           return done(err)
         }

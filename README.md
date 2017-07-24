@@ -134,7 +134,7 @@ This is my **site**!
 
 ### `.pattern`
 
-Render content only matching the given [minimatch](https://www.npmjs.com/package/minimatch) pattern. Defaults to `**`.
+Render content only matching the given [multimatch](https://www.npmjs.com/package/multimatch) pattern(s). Defaults to `**`.
 
 ### `.layoutPattern`
 

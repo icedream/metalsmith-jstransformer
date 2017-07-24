@@ -29,7 +29,7 @@
     "extend": "^3.0.0",
     "inputformat-to-jstransformer": "^1.1.9",
     "jstransformer": "~1.0.0",
-    "minimatch": "^3.0.3"
+    "multimatch": "^2.1.0"
   },
   "devDependencies": {
     "assert-dir-equal": "1.*",
